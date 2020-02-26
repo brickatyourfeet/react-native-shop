@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useState } from 'react'
+import { StyleSheet } from 'react-native'
 import { createStore, combineReducers} from 'redux'
 import { Provider } from 'react-redux'
 import { AppLoading } from 'expo'
@@ -36,7 +36,7 @@ export default function App() {
     <Provider store = {store}>
       <ShopNavigator />
     </Provider>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
