@@ -38,9 +38,9 @@ export default (state = initialState, action) => {
         if(currentQty > 1){
           const updatedCartItem = new CartItem(
             state.items[action.pid].quantity - 1, 
-            selectedCartItem.prodPrice, 
-            selectedCartItem.prodTitle, 
-            selectedCartItem.sum - selectedCartItem.prodPrice
+            selectedCartItem.productPrice, 
+            selectedCartItem.productTitle, 
+            selectedCartItem.sum - selectedCartItem.productPrice
             )
             updatedCartItems = { ...state.items, [action.pid]: updatedCartItem}
         } else {
@@ -50,7 +50,7 @@ export default (state = initialState, action) => {
         return {
           ...state,
           items: updatedCartItems,
-          totalAmount: state.totalAmount - selectedCartItem.prodPrice
+          totalAmount: state.totalAmount - selectedCartItem.productPrice
         }
   }
   return state
