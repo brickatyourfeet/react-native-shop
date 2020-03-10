@@ -10,9 +10,9 @@ import * as ordersActions from '../../store/actions/orders'
 const CartScreen = props => {
   const cartTotalAmount = useSelector(state => state.cart.totalAmount)
   const cartItems = useSelector(state => {
-    const transformedCartItems = []
+    const itemForCart = []
     for (const key in state.cart.items) {
-      transformedCartItems.push({
+      itemForCart.push({
         productId: key,
         productTitle: state.cart.items[key].productTitle,
         productPrice: state.cart.items[key].productPrice,
@@ -21,7 +21,7 @@ const CartScreen = props => {
       })
     }
     ///sort used to keep the cart order when a quantity is removed
-    return transformedCartItems.sort((a, b) => a.productId > b.productId ? 1 : -1)
+    return itemForCart.sort((a, b) => a.productId > b.productId ? 1 : -1)
   })
   const dispatch = useDispatch()
 

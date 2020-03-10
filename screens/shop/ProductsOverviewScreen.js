@@ -28,6 +28,7 @@ const ProductsOverviewScreen = props => {
         title={itemData.item.title}
         price={itemData.item.price}
         onSelect={()=> {
+          //should the whole card be touchable?   
           selectItemHandler(itemData.item.id, itemData.item.title)
         }}
       >
